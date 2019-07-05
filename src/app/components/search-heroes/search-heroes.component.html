@@ -1,0 +1,14 @@
+<h1>Buscando a: <small> {{ termino }} </small></h1>
+<hr>
+<div class="container alert alert-info animated fadeIn fast" role="alert" *ngIf="searchHeroe.length == 0">
+    <span>No se entontro resultado con el término {{ termino }}</span>
+</div>
+
+<div class="card-columns">
+    <!-- *ngFor="let heroe of searchHeroe; let i = index" -->
+    <app-heroe-tarjeta
+    [heroe] ="heroe"
+    [idx]="heroe.idx"
+    *ngFor="let heroe of searchHeroe;">
+    </app-heroe-tarjeta>
+</div>

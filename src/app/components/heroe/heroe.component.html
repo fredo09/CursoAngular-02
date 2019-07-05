@@ -1,0 +1,33 @@
+<div class="container">
+    <h1>Heroe: <small>{{ heroe.nombre | uppercase}}</small></h1>
+    <hr>
+    <div class="row">
+        <div class="col-md-4">
+            <img [src]="heroe.img" alt="heroe"class="img-fluid">
+
+            <button type="button" (click)="RegresaHeroes()" class="btn btn-outline-primary btn-block mt-5">
+                Regresar
+            </button>
+        </div>
+        <div class="col-md-8">
+                <div class="card" style="width: 100%;">
+                    <div class="card-body">
+                        <h2 class="card-title">Nombre: {{ heroe.nombre }}</h2>
+                        <hr>
+                        <h4>Acerca:</h4>
+                        <p class="card-text">{{ heroe.bio }}</p>
+                        <div class="row">
+                            <div class="col">
+                                <h5>Aparación</h5>
+                                <span class="aparicion"> {{ heroe.aparicion | date: 'yyyy' }}</span>
+                            </div>
+                            <div class="col">
+                                <h5>{{ heroe.casa }}</h5>
+                                <img [src]="heroe.logo" alt="logo_casa" class="img-fluid" style="width: 60px;">
+                            </div>
+                        </div>
+                    </div>
+                </div>                      
+        </div>
+    </div>
+</div>
